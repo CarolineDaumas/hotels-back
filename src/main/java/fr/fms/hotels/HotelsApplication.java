@@ -2,14 +2,17 @@ package fr.fms.hotels;
 
 import fr.fms.hotels.dao.CityRepository;
 import fr.fms.hotels.dao.HotelRepository;
+import fr.fms.hotels.downupload.FileUploadProperties;
 import fr.fms.hotels.entities.City;
 import fr.fms.hotels.entities.Hotel;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.boot.context.properties.EnableConfigurationProperties;
 
 @SpringBootApplication
+@EnableConfigurationProperties({FileUploadProperties.class})
 public class HotelsApplication implements CommandLineRunner {
 
 	@Autowired
