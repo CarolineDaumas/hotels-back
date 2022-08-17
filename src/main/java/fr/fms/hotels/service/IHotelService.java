@@ -17,4 +17,8 @@ public interface IHotelService {
     Optional<Hotel> readHotel(Long id);
 
     List<Hotel> readHotelsByCityId(Long cityId);
+
+    List<Hotel> readHotelsByCityName(String name);
+
+    List<Hotel> readHotelsByCityNameContains(String name);
 }

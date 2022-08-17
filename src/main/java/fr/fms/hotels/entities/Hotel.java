@@ -25,7 +25,7 @@ public class Hotel implements Serializable {
     private int numberStars;
     private int availableRooms;
     private double price;
-   //"na private String img;
+    private String img;
 
     @ManyToOne
     private City city;

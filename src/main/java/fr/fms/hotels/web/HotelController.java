@@ -46,4 +46,14 @@ public class HotelController {
     public List<Hotel> allHotelsByCityId(@PathVariable ("id") Long id)
     { return implHotelService.readHotelsByCityId(id);}
 
+    @GetMapping("cities/{name}/hotels")
+    public List<Hotel> allHotelsByCityName(@PathVariable ("name") String name)
+    { return implHotelService.readHotelsByCityName(name);}
+
+    @GetMapping("/research/{name}")
+    public List<Hotel> getHotelsBySearch(@PathVariable("name") String name) {
+        List<Hotel> hotelsBySearch = implHotelService.readHotelsByCityNameContains(name);
+        return hotelsBySearch;
+    }
+
 }
