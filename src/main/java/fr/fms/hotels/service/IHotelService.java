@@ -22,4 +22,6 @@ public interface IHotelService {
     List<Hotel> readHotelsByCityNameContains(String name);
 
     City readCityById(Long id) throws Exception;
+
+    City saveCity(City c);
 }

@@ -58,4 +58,9 @@ public class ImplHotelService implements IHotelService{
     public City readCityById(Long id) throws Exception {
         return cityRepository.findById(id).get();
     }
+
+    @Override
+    public City saveCity(City c) {
+        return cityRepository.save(c);
+    }
 }

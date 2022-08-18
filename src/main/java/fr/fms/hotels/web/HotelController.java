@@ -42,6 +42,11 @@ public class HotelController {
         return implHotelService.readAllCities();
     }
 
+    @PostMapping("/cities")
+    public City saveCity(@RequestBody City c) {
+        return implHotelService.saveCity(c);
+    }
+
     @GetMapping("/cities/{id}/hotels")
     public List<Hotel> allHotelsByCityId(@PathVariable ("id") Long id)
     { return implHotelService.readHotelsByCityId(id);}
