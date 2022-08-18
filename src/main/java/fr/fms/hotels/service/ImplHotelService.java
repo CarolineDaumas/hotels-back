@@ -53,4 +53,9 @@ public class ImplHotelService implements IHotelService{
     public List<Hotel> readHotelsByCityNameContains(String name) {
         return hotelRepository.findByCityNameContains(name);
     }
+
+    @Override
+    public City readCityById(Long id) throws Exception {
+        return cityRepository.findById(id).get();
+    }
 }

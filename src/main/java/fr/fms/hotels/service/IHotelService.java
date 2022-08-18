@@ -1,5 +1,6 @@
 package fr.fms.hotels.service;
 
+import fr.fms.hotels.entities.City;
 import fr.fms.hotels.entities.Hotel;
 import org.springframework.stereotype.Service;
 
@@ -19,4 +20,6 @@ public interface IHotelService {
     List<Hotel> readHotelsByCityId(Long cityId);
 
     List<Hotel> readHotelsByCityNameContains(String name);
+
+    City readCityById(Long id) throws Exception;
 }
